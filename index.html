@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+        let num = Math.floor(Math.random() * 101);
+        let gotIt = false;
+        let guess = prompt("Guess an number between 1 and 100");
+        let counter = 1; 
+            /* 
+            to increment counter you can do this :
+            counter++;
+            or this :
+            counter += 1 
+            or this :
+            counter = counter + 1  
+            */
+            while(gotIt == false){
+             if(num == guess){
+                alert("Congratulations! You guessed the correct number, which was " + num + " and it took you " + counter + " guesses");
+                gotIt = true ;
+            }else if(guess == ""){
+                alert("You didn't guess!");
+                guess = prompt("Guess a number between 1-100");
+                counter++;
+            }else if(guess < num) {
+                alert("Go Higher");
+                guess = prompt("Guess a number between 1-100");
+                counter++;
+            }else if(guess > num) {
+                alert("Go Lower");
+                guess = prompt("Guess a number between 1-100");
+                counter++;
+            }
+
+
+            }
+
+        
+
+
+
+
+
+
+
+        if(num == guess){
+            alert("You got it!")
+        }else{
+            alert("Sorry, that is wrong!")
+        }
+
+        //alert(num)
+
+        //alert("is this working ?");
+	</script>
+</body>
+</html>
